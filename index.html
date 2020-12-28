@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Simple Calc</title>
+</head>
+<body>
+    <div class="wrap">
+        <form name="calc" id="calc">
+        <input type="text" name="output" id="output"><br>
+        <div class="keyboard">
+            <div class="first">
+                <input type="button" value="7" onclick="calc.output.value+='7'">
+                <input type="button" value="8" onclick="calc.output.value+='8'">
+                <input type="button" value="9" onclick="calc.output.value+='9'">
+                <input type="button" value="+" onclick="calc.output.value+='+'">
+            </div>
+            <div class="first">
+                <input type="button" value="4" onclick="calc.output.value+='4'">
+                <input type="button" value="5" onclick="calc.output.value+='5'">
+                <input type="button" value="6" onclick="calc.output.value+='6'">
+                <input type="button" value="-" onclick="calc.output.value+='-'">
+            </div>
+            <div class="first">
+                <input type="button" value="1" onclick="calc.output.value+='1'">
+                <input type="button" value="2" onclick="calc.output.value+='2'">
+                <input type="button" value="3" onclick="calc.output.value+='3'">
+                <input type="button" value="*" onclick="calc.output.value+='*'">
+            </div>
+            <div class="first">
+                <input type="button" value="00" onclick="calc.output.value+='00'">
+                <input type="button" value="0" onclick="calc.output.value+='0'">
+                <input type="button" value="&#247;" onclick="calc.output.value+='/'">
+                <input type="button" value="=" onclick="calc.output.value=eval(calc.output.value)">
+            </div>
+            <div class="first">
+                <input type="button" value="&nbsp;" id="empty">
+                <input type="button" value="&nbsp;" id="empty">
+                <input type="button" value="&leftarrow;" onclick="backspace()">
+                <input type="button" value="AC" onclick="calc.output.value= ''" id="del">
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
